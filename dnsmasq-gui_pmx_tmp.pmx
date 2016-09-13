@@ -8,9 +8,9 @@ images:
 - name: quay.io_jpillora_dnsmasq-gui_latest
   source: quay.io/jpillora/dnsmasq-gui:latest
   type: Default
-expose:
-- '3000'
-ports:
-- host_port: '8081'
-  container_port: '8080'
-  proto: TCP
+  expose:
+  - '3000'
+  ports:
+  - host_port: '8081'
+    container_port: '8080'
+    proto: TCP
