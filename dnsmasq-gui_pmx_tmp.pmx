@@ -1,9 +1,11 @@
 ---
 name: dnsmasq-gui_pmx_tmp
-description: 'Panamax Template for dnsmasq gui'
+description: Panamax Template for dnsmasq gui
 keywords: dnsmasq, panamax, pmx
 type: Default
-documentation: ''
+documentation: |-
+  Panamax Template for dnsmasq gui
+  Accessible on http port 8081
 images:
 - name: quay.io_jpillora_dnsmasq-gui_latest
   source: quay.io/jpillora/dnsmasq-gui:latest
@@ -12,3 +14,9 @@ images:
   - host_port: '8081'
     container_port: '8080'
     proto: TCP
+  - host_port: '53'
+    container_port: '53'
+    proto: UDP
+  volumes:
+  - host_path: "/opt/dnsmasq.conf"
+    container_path: "/etc/dnsmasq.conf"
