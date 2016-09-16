@@ -1,0 +1,21 @@
+---
+name: ninjasphere_docker
+description: 'Docker container of ninjasphere from: https://hub.docker.com/r/theojulienne/ninjasphere/'
+keywords: snappy, ninjasphere, ninjablocks, docker
+type: Default
+documentation: ''
+images:
+- name: theojulienne_ninjasphere_latest
+  source: theojulienne/ninjasphere:latest
+  category: Ninjasphere
+  type: Default
+  ports:
+  - host_port: '1833'
+    container_port: '1833'
+    proto: TCP
+  - host_port: '8000'
+    container_port: '8000'
+    proto: TCP
+  environment:
+  - variable: VIRTUAL_HOST
+    value: docker_ninjasphere.mck.mvk.cx
