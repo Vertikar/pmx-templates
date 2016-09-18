@@ -15,4 +15,4 @@ images:
     proto: TCP
   volumes:
   - host_path: "/var/run/docker.sock"
-    container_path: ":/tmp/docker.sock:ro"
+    container_path: "/tmp/docker.sock:ro"
