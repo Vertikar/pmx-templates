@@ -1,0 +1,20 @@
+---
+name: home-assistant
+description: ''
+keywords: hass, home assistant, home-assistant
+type: Default
+documentation: ''
+images:
+- name: home-assistant
+  source: homeassistant/home-assistant:latest
+  category: App
+  type: Default
+  environment:
+  - variable: VIRTUAL_HOST
+    value: home-assistant.ell.lan
+  volumes:
+  - host_path: "/etc/localtime"
+    container_path: "/etc/localtime:ro"
+  - host_path: "/mnt/DockerConfigs/hass"
+    container_path: "/config"
+  command: "--net=host"
