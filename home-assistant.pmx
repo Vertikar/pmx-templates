@@ -1,11 +1,11 @@
 ---
-name: home-assistant
+name: homeassistant
 description: ''
 keywords: hass, home assistant, home-assistant
 type: Default
 documentation: ''
 images:
-- name: home-assistant
+- name: homeassistant
   source: homeassistant/home-assistant:latest
   category: App
   type: Default
